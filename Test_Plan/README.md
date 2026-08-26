@@ -148,4 +148,85 @@ Verify that :
 
   8.TEST AREAS
 
+  | ID | Test Area |
+  | ---|---|
+  |DB - 01 |Database and table structure|
+  | DB - 02|Data types|
+  | DB - 03| Primary key validation|
+  | DB - 04| Foreign key validation|
+  | DB - 05| NOT NULL constraints|
+  | DB - 06| Data insertion|
+  | DB - 07| Data retrieval|
+  | DB - 08| Data update|
+  | DB - 09| Data deletion|
+  | DB - 10| Data integrity|
+  | DB - 11| Data consistency|
+  | DB - 12| SQL queries|
+  | DB - 13| JOIN operation|
+  | DB - 14| Positive scenarios|
+  | DB - 15| Negative scenarios|
+
+  9.ENTRY CRITERIA
+
+  Testing can begin when:
+  - the SQLite database has been created;
+  - the 'students' and 'courses' tables have been created;
+  - the database structure has been defined;
+  - the relationships between the tables has been configured;
+  - the database is accessible through DBeaver;
+  - test data has been prepared;
+  - expected results have been defined.
+
+  10.EXIT CRITERIA
+
+  Testing can be completed when:
+  - all planned test cases have been executed;
+  - database structure has been verified;
+  - primary and foreign keys have been tested;
+  - CRUD operations have been tested;
+  - positive and negative scenarios have been executed;
+  - data integrity and consistency have been verified;
+  - JOIN queries have been tested;
+  - identified defects have been documented;
+  - a summary report has been prepared.
+
+  11.DEFECT REPORTING
+
+  Identified defects will be documented using the following information:
+  - Defect ID;
+  - Title;
+  - Preconditions;
+  - Steps to Reproduce;
+  - Expected Result;
+  - Actual Result;
+  - Severity;
+  - Priority;
+  - SQL Query
+  - Evidence/Screenshots
+
+  12.TEST DELIVERABLES
+
+  The following artifacts will be included in the project:
+  - Test Plan;
+  - Database Schema;
+  - SQL scripts;
+  - Test Data;
+  - Positive Test Cases;
+  - Negative Test Cases;
+  - CRUD Test Cases;
+  - Data Integrity Test Cases;
+  - SQL Query Test Cases;
+  - JOIN Test Cases;
+  - Screenshots;
+  - Summary Report.
+
+  13.TOOLS
+
+  - SQLite
+  - DBeaver
+  - SQL
+  - Git
+  - GitHub
+
+
  
