@@ -66,5 +66,45 @@ Test Data: courses expected columns:
 - duation
 
 Steps: 
-1. 
+1. Open the database.
+2. Execute PRAGMA table_info (courses).
+3. Compare the returned columns with the expected structure.
+
+Expected Result:
+- All expected columns exist.
+- Column names correspond to the expected database structure.
+
+Test Type: Structural Testing
+
+Test Design Technique: Checklist-based testing
+
+
+ TC-DB-04 Verify NOT NULL constraints in students table
+
+ Module: Constraints
+
+ Preconditions: 
+ - 'students' table exists.
+ - Requied columns are configured as NOT NULL.
+
+Test Data: 
+- student_id;
+- first_name;
+- last_name;
+- country;
+- couse_id.
+
+Steps:
+1. Execute the INSERT statement using the provided data.
+2. Retrieve the newly created record using SELECT.
+3. Verify that all supplied values are stored correctly.
+
+Expected Result: 
+- The record is successfully inserted.
+- All required fields contain the provided values.
+- No constraints violation occurs.
+
+Test Type: Functional Testing/Database Testing
+
+Test design Technique: Positive Testing
   
