@@ -107,4 +107,102 @@ Expected Result:
 Test Type: Functional Testing/Database Testing
 
 Test design Technique: Positive Testing
-  
+
+
+TC-DB-05 Verify NOT NULL constraints in courses table
+
+Module: Constraints
+
+Preconditions: 
+- courses table exists.
+- Requied columns are configured as NOT NULL.
+
+Test Data:
+- course_id;
+- course_name;
+- duration.
+
+Steps: 
+1. Execute the INSERT statement using the provided data.
+2. Retrieve the newly created record using SELECT.
+3. Verify that all supplied values are stored correctly.
+
+Expected Result:
+  - The record is successfully inserted.
+- All required fields contain the provided values.
+- No constraints violation occurs.
+
+Test Type: Functional Testing/Database Testing
+
+Test design Technique: Positive Testing.
+
+
+TC-DB-06 Verify valid data types
+
+Module: Data Types
+
+Preconditions:
+- students and courses table exist.
+
+Test Data:
+| Table  | Column | Expected Type  |
+|students |student_id|INTEGER |
+|students| first_name|TEXT | 
+|students| last_name|TEXT |
+| students| country| TEXT | 
+| students| course_id| INTEGER | 
+| courses| course_id| INTEGER | 
+| courses| course_name| TEXT| 
+| courrses| duration| INTEGER | 
+
+Steps:
+1.Execute PRAGMA table_info(students).
+2.Execute PRAGMA table_info(courses)
+3.Compare the returned data types with the expected types.
+
+Expected Result:
+- Each column has the declared data type.
+- Valid values can be stored in the corresponding columns.
+
+Test Type: Structural Testing/ Database Testing
+
+Test design Technique: Checklist-based testing
+
+
+TC-DB-07 Verify data integrity and consistency
+
+Modul: Data Integrity
+
+Preconditions:
+- Student with student_id = 1 exists.
+- Course with course_id = 1 exists.
+
+Test Data:
+STUDENT:
+-student_id;
+-first_name;
+-last_name;
+-country;
+-course_id
+
+COURSE:
+-course_id;
+-course_name;
+-duration
+
+Steps:
+1.Retrieve the student record using student_id=1.
+2.Retrieve the corresponding course using course_id =1.
+3.Compare the storedvalues with the expected test data.
+4.Verify that course_id in the students record coresponds to the existing course.
+
+Expected Result:
+- stored student data matches the expected data.
+- stored course data matches the expected data.
+- related data remains consistent.
+
+Test Type: Data Integity Testing
+
+Test Design Technique: Equivalence Partitioning
+
+
