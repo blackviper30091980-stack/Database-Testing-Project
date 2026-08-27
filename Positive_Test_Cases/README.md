@@ -206,3 +206,88 @@ Test Type: Data Integity Testing
 Test Design Technique: Equivalence Partitioning
 
 
+TC-DB-08 Verify primary key
+
+Modul: Keys and Relationships
+
+Preconditions: 'students' and 'courses' table exist
+
+Test Data: 
+- students.student_id
+- courses.course_id
+
+Steps:
+1.Execute PRAGMA table_info(students);
+2.Check the pk value for student_id;
+3.Execute PRAGMA table_info(courses);
+4.Check the pk value for course_id.
+
+Expected Result:
+- students.student_id is defined as a primary key;
+- courses.course_id is defined as a primarykey.
+
+Test Type: Structural Testing
+
+Test Design Technique: Checklist-based testing
+
+
+TC-DB-09 Verify foreign key relationship
+
+Module: Keys and Relationships
+
+Preconditions:
+- students and courses tables exist;
+- a course with course_id = 1 exist.
+
+Test Data:
+- courses.course_id = 1
+- students.student_id =1
+
+Steps:
+1.Execute PRAGMA foreign_key_list(students);
+2.Verify that students.course_id references courses.course_id.
+3.Insert or use a student record with course_id=1.
+4.Retrieve the student record.
+5.Verify that the referenced course exists.
+
+Expected Result:
+- students.course_id is defined as a foreign key;
+- it references courses.course_id;
+- a student can successfully reference an existing course.
+
+Test Type: Referential Integrity Testing
+
+Test Design Technique: Positive Testing
+
+
+TC-DB-10 Verify JOIN operation between students and courses
+
+Module:Data Relationships/JOIN
+
+Preconditions:
+- students contains a student with course_id = 1;
+- courses contains a course with coures_id =1.
+
+Test Data:
+- students.course_id =1;
+- courses.course_id =1.
+
+Steps:
+1.Execute an INNER JOIN between students and courses.
+2.Join the tables using students.course_id = courses.course_id.
+3.Retrieve student and course information.
+4.Compare the returned values with the source records.
+
+Expected Result:
+- the query executes successfully;
+- the student is matched with the correct course;
+- the result contains the expected student and course information.
+
+Test Type: FunctionL Testing/Database Testing
+
+Test Design Technique: Positive Testing
+
+
+
+
+
