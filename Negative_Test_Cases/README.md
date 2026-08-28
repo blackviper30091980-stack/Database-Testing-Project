@@ -90,3 +90,34 @@ Test Type: Negative /Database Testing
 
 Test Design Technique: Error guessing
 
+
+TC-DB-04 Insert the student with non-existing course_id
+
+Module:Referential Integity/ Foreign Key
+
+Preconditions:
+- students and courses tables exist.
+- students.course_id is defined as a foreign key referecing courses.course_id.
+- course_id = 999 does not exist in the courses table.
+
+Test Data:
+- student_id:6;
+- first_name:Anna;
+- last_name:Smith;
+- country: ukraine;
+- course_id:999.
+
+Steps: 
+1.Execute an INSERT statement into the students table using course_id = 999.
+2.Query the students table for student_id = 6
+
+Expected Result:
+- The database rejects the INSERT operation.
+- A foreign key constraint error is returned.
+- Student with student_id = 6 is not added to the table.
+
+Test Type: Referential Integrity Testing
+
+Test Design Technique:Error Guessing
+
+
