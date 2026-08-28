@@ -121,3 +121,82 @@ Test Type: Referential Integrity Testing
 Test Design Technique:Error Guessing
 
 
+TC-DB-05 Insert invalid data type into duration
+
+Module: Courses table/Data type Validation
+
+Preconditions:
+- courses table exists.
+- duration is defined as INTEGER.
+
+Test Data:
+- course_id : 103;
+- course_name: Database Testing;
+- duration: "eight".
+
+Steps:
+1.Attempt to insert the record with a text value in duration.
+2.Retrieve the inserted record.
+3.Verify the stored value and its type.
+
+Expected Result:
+- The database should reject data that violates the expoected INTEGER type.
+- If SQLite accepts the value because of its type-affinity rules, the result should be documented as an observed SQLite behavior and evaluated against the project requirements.
+
+Test Type: Negative / Database Testing
+
+Test Design Technique: Equivalence Partitioning
+
+
+TC-DB-06 JOIN using a non-existing column
+
+Module: SQL Queries/ JOIN
+
+Preconditions:
+- students and courses tables exist.
+- The tables have the expected columns.
+- Database connection is active.
+
+Test Data:
+- invalid JOIN column:students.invalid_course_id
+
+Steps:
+1.Write an INNER JOIN query using a non-existing column.
+2.Execute the query.
+3.Observe the database response.
+
+Expected Result:
+- The database rejects the query.
+- An error indicating that the specified column does not exist is returned.
+- NO result set is returned.
+
+Test Type: Negative / Database Testing
+
+Test Design Technique: Error Guessing
+
+TC-DB-07 Query a non-existing table
+
+Module: Database Structure/ SQL Queries
+
+Preconditions:
+- Database exists.
+- students and courses tables exist.
+- a table named teachers does not exist.
+
+Test Data:
+- Table: teachers
+
+Steps:
+1. Execute: SELECT * FROM teachers;
+2. Observe the database response.
+
+Expected Result:
+- The database rejects the query.
+- An error indicating that the table does not exist is returned.
+- No result set is returned.
+
+Test Type: Negative / Database Testing
+
+Test Design Technique: Error Guessing
+
+
