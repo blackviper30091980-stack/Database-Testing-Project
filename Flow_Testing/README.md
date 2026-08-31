@@ -5,7 +5,7 @@ Module:Courses/CRUD
 Preconditions:
 - Database is created and accessible.
 - courses table exists.
-- course_id =    does not exist in the courses table.
+- course_id =  7  does not exist in the courses table.
 
 Test Data:
 - course_id:  ;
@@ -13,13 +13,16 @@ Test Data:
 - duration:  8.
 
 Steps:
+
 1.Execute an INSERT statement to add the course to the courses table.
-2.execute a SELECT query using course_id =  .
+
+2.execute a SELECT query using course_id = 7 .
+
 3.Verify the returned record.
 
 Expected Result:
 - The course is successfully inserted into the courses table.
-- The record with course_id =   exists.
+- The record with course_id =  7 exists.
 - All inserted values corresponds to the test data.
 
 Test Type: Positive/ Database Testing/CRUD Testing
