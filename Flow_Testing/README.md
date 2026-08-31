@@ -45,7 +45,7 @@ Test Data:
 - first_name: Anna;
 - last_name: Smith;
 - country: Ukraine;
-- course_id:  .
+- course_id:7  .
 
 Steps:
 1. Execute an INSERT statement to add the student to the students table.
@@ -55,7 +55,7 @@ Steps:
 Expected Result:
 - The student is successfully inserted.
 - The record with student_id = 6 exists.
-- course_id =   is stored for the student.
+- course_id =  7 is stored for the student.
 - The inserted values corresponds to the test data.
 
 Test Type:Positive / Database Testing/CRUD Testing
