@@ -82,7 +82,7 @@ Test Data:
  1.Retrieve student_id =5/ 6 from the students table.
  
  2. Retrive course_id =  7  from the courses table.
- 3. 
+  
  3.Compare students.course_id with courses.course_id.
 
  4.Verify that the referenced course exists.
