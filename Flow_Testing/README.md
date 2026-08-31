@@ -68,19 +68,23 @@ FLOW-3 Verify referential integrity between students and courses
 Module: Students- Courses/ Foreign Key
 
 Preconditions:
-- course with course_id =    exists in the courses table.
-- student with student_id = 6 exists in the students table.
+- course with course_id = 7   exists in the courses table.
+- student with student_id =5/ 6 exists in the students table.
 - students.course_id is defined as a foreign key.
 - Foreign key enforcement is enabled.
 
 Test Data:
-- students.course_id:   ;
-- courses.course_id:    .
+- students.course_id: 7  ;
+- courses.course_id:  7  .
 
  Steps:
- 1.Retrieve student_id = 6 from the students table.
- 2. Retrive course_id =    from the courses table.
+ 
+ 1.Retrieve student_id =5/ 6 from the students table.
+ 
+ 2. Retrive course_id =  7  from the courses table.
+ 3. 
  3.Compare students.course_id with courses.course_id.
+
  4.Verify that the referenced course exists.
 
  Expected Result:
