@@ -135,23 +135,28 @@ Expected Result:
   Module: Students- Courses/ CRUD
 
   Preconditions:
-  - Student with student_id = 6 exists.
-  - Course with course_id =    exists.
+  - Student with student_id = 5 exists.
+  - Course with course_id =  7  exists.
   - The student is associated with the course.
 
   Test Data:
   INITIAL:
-  - course_id:   ;
+  - course_id: 7  ;
   - course_name: SQL Testing;
   - duration: 8.
   UPDATED:
 - duration: 10.
 
 Steps:
-1.Execute an update statement for course_id =   .
+
+1.Execute an update statement for course_id = 7.
+
 2.Change duration from 8 to 10.
-3.Execute a SELECT query for course_id =   .
+
+3.Execute a SELECT query for course_id =  7.
+
 4.Execute the existing INNER JOIN query for student_id = 6.
+
 5.Verify the updated data.
 
 Expected Result:
