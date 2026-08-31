@@ -120,3 +120,92 @@ Expected Result:
 
 
   FLOW-05 Verify data updating after insertion
+
+  Module: Students- Courses/ CRUD
+
+  Preconditions:
+  - Student with student_id = 6 exists.
+  - Course with course_id =    exists.
+  - The student is associated with the course.
+
+  Test Data:
+  INITIAL:
+  - course_id:   ;
+  - course_name: SQL Testing;
+  - duration: 8.
+  UPDATED:
+- duration: 10.
+
+Steps:
+1.Execute an update statement for course_id =   .
+2.Change duration from 8 to 10.
+3.Execute a SELECT query for course_id =   .
+4.Execute the existing INNER JOIN query for student_id = 6.
+5.Verify the updated data.
+
+Expected Result:
+- The duration value is successfully updated from 8 to 10.
+- The student remains associated with course_id.
+- The JOIN result displays the updated course duration.
+
+Test Type: Positive/ Database Testing
+
+Test Design Technique: Equivalence Partitioning
+
+
+FLOW-06 Verify student deletion
+
+Module: Students/ CRUD
+
+Preconditions:
+- Student with student_id exists.
+- Student is associated with course_id  =  .
+- Course with course_id =    exists.
+
+Test Data:
+- student_id:6.
+
+Steps:
+1. Executea DELETE statement for student_id = 6.
+2. Execute a SELECT query for student_id =6.
+3. Verify the database response.
+
+Expected Result:
+- The student record is successfully deleted from the students table.
+- No record with student_id = 6 is returned.
+
+Test Type: Positive / Database Testing
+
+Test Design Technique: Equivalence Partitioning
+
+
+FLOW-07 Confirm student deletion
+
+Module: Students/Data Verification
+
+Preconditions:
+- student_id = 6 has been deleted in FLOW-06.
+- courses table remains available.
+- course_id =    still exists.
+
+Test Data:
+- student_id:6.
+
+Steps:
+1. Execute a SELECT query for student_id = 6.
+2. Execute an INNER JOIN query filtering by student_id = 6.
+3. Verify both query results.
+
+Expected Result:
+- The SELECT query returns no record for student_id = 6.\
+- The INNER JOIN query also returns no record for student_id = 6.
+- The associated course remains in the courses table.
+
+Test Type: Positive Database Testing
+
+Test Design Technique: Equivalence Partitioning
+
+  
+
+
+  
