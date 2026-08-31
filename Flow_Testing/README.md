@@ -102,18 +102,22 @@ FLOW-04  Verify INNER JOIN operation
 Module: SQL Queries/ JOIN
 
 Preconditions:
-- students with student_id = 6 exists.
-- course with course_id =     exists.
+- students with student_id = 1/2 exists.
+- course with course_id =  5   exists.
 - The student is associated with the course through  students.course_id.
 
  Test Data:
- - student_id: 6;
- - course_id:    .
+ - student_id: 1/2;
+ - course_id:  5  .
 
 Steps:
+
 1.Execute an INNER JOIN between students and courses.
+
 2. Join the tables using students.course_id = courses.course_id.
-3. Filter the results for student_id=6.
+ 
+3. Filter the results for student_id=1/2.
+
 4.Verify the returned data.
 
 Expected Result:
