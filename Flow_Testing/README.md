@@ -155,7 +155,7 @@ Steps:
 
 3.Execute a SELECT query for course_id =  7.
 
-4.Execute the existing INNER JOIN query for student_id = 6.
+4.Execute the existing INNER JOIN query for student_id = 5
 
 5.Verify the updated data.
 
