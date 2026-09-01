@@ -174,15 +174,15 @@ FLOW-06 Verify student deletion
 Module: Students/ CRUD
 
 Preconditions:
-- Student with student_id exists.
-- Student is associated with course_id  =  .
-- Course with course_id =    exists.
+- Student with student_id = 6 exists.
+- Student is associated with course_id  = 7 .
+- Course with course_id =  7  exists.
 
 Test Data:
 - student_id:6.
 
 Steps:
-1. Executea DELETE statement for student_id = 6.
+1. Execute a DELETE statement for student_id = 6.
 2. Execute a SELECT query for student_id =6.
 3. Verify the database response.
 
