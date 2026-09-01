@@ -112,8 +112,10 @@ Test Data:
 - country: ukraine;
 - course_id:999.
 
-Steps: 
+Steps:
+
 1.Execute an INSERT statement into the students table using course_id = 999.
+
 2.Query the students table for student_id = 6
 
 Expected Result:
@@ -140,12 +142,17 @@ Test Data:
 - duration: "eight".
 
 Steps:
+
 1.Attempt to insert the record with a text value in duration.
+
 2.Retrieve the inserted record.
+
 3.Verify the stored value and its type.
 
 Expected Result:
+
 - The database should reject data that violates the expoected INTEGER type.
+ 
 - If SQLite accepts the value because of its type-affinity rules, the result should be documented as an observed SQLite behavior and evaluated against the project requirements.
 
 Test Type: Negative / Database Testing
