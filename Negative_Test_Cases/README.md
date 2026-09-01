@@ -173,8 +173,11 @@ Test Data:
 - invalid JOIN column:students.invalid_course_id
 
 Steps:
+
 1.Write an INNER JOIN query using a non-existing column.
+
 2.Execute the query.
+
 3.Observe the database response.
 
 Expected Result:
