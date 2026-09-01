@@ -44,12 +44,17 @@ Test Data:
 - duration.
 
 Steps:
+
 1.Execute an INSERT statement with valid course_name;
+
 2.Execute an INSERT statement with duration = NULL.
 
 Expected Result:
+
 - The database rejects the INSERT statement.
+ 
 - A NOT NULL constraints violation error is returned.
+ 
 - A course is not added to the courses table.
 
 Test Type: Negative/Database Testing
