@@ -27,7 +27,9 @@ STEPS TO REPRODUCE:
 EXPECTED RESULT:
 
 -The database rejects the INSERT operation.
+
 -A NOT NULL constraints failed error is returned.
+
 -No record with student_id is created.
 
 SIMULATED ACTUAL RESULT:
