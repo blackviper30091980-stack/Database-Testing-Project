@@ -82,4 +82,13 @@ SIMULATED ACTUAL RESULT:
 VERSION/ENV: SQLite3 Database version 3.52.3; DBeaver 26.1.1; Script-4.sql; 
 
 
+ID: DB - 03
+
+SEVERITY: Critical
+
+PRIORITY: High
+
+TITLE: Database accepts INNER JOIN query with non-existing table.
+
+
 
