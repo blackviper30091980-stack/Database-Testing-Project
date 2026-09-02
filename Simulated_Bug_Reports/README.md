@@ -18,4 +18,25 @@ PRECONDITIONS:
 
 STEPS TO REPRODUCE:
 
-1.
+1.Open the database.
+
+2.Execute an INSERT statement with first_name = NULL.
+
+3.Execute a SELECT query to check whether the record was inserted.
+
+EXPECTED RESULT:
+
+-The database rejects the INSERT operation.
+-A NOT NULL constraints failed error is returned.
+-No record with student_id is created.
+
+SIMULATED ACTUAL RESULT:
+
+- The database accepts the INSERT operation and creates the record with NULL fist_name in the 'students'table.
+
+- No error message is returned. 
+
+
+
+
+
