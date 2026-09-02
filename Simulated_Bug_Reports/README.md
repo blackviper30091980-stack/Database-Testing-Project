@@ -41,6 +41,11 @@ SIMULATED ACTUAL RESULT:
 VERSION/ENV: SQLite3 Database version 3.52.3; DBeaver 26.1.1; Script-4.sql; 
 
 
+ID: DB - 02
+
+TITLE: 
+
+
 
 
 
