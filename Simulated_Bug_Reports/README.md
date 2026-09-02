@@ -34,7 +34,9 @@ SIMULATED ACTUAL RESULT:
 
 - The database accepts the INSERT operation and creates the record with NULL fist_name in the 'students'table.
 
-- No error message is returned. 
+- No error message is returned.
+
+VERSION/ENV: SQLite3 Database version 3.52.3; DBeaver 26.1.1; Script-4.sql; 
 
 
 
