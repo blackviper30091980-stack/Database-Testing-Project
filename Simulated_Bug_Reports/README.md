@@ -38,7 +38,7 @@ SIMULATED ACTUAL RESULT:
 
 - No error message is returned.
 
-VERSION/ENV: SQLite3 Database version 3.52.3; DBeaver 26.1.1; Script-4.sql; 
+VERSION/ENV: SQLite3 Database version 3.52.3; DBeaver 26.1.1; Script-4.sql. 
 
 
 ID: DB - 02
@@ -79,7 +79,7 @@ SIMULATED ACTUAL RESULT:
 
 -  NO UNIQUE constraints primary key constraint error is returned.
 
-VERSION/ENV: SQLite3 Database version 3.52.3; DBeaver 26.1.1; Script-4.sql; 
+VERSION/ENV: SQLite3 Database version 3.52.3; DBeaver 26.1.1; Script-4.sql. 
 
 
 ID: DB - 03
@@ -96,4 +96,31 @@ PRECONDITIONS:
 - The tables have the expected columns.
 - Database connection is active.
 
+Steps:
 
+1.Write an INNER JOIN query using a non-existing column.
+
+2.Execute the query.
+
+3.Observe the database response.
+
+Expected Result:
+
+- The database rejects the query.
+
+- An error indicating that the specified column does not exist is returned.
+  
+- NO result set is returned.
+
+SIMULATED ACTUAL RESULT:
+
+-  Database accepts INNER JOIN query with non-existing table.
+
+-   NO error indicating that the specified column does not exist is returned.
+  
+- The query was executed successfully and returned results.
+
+VERSION/ENV: SQLite3 Database version 3.52.3; DBeaver 26.1.1; Script-4.sql.
+
+
+NO actual defects were identified during testing.The bug reports in this folder are simulated examples created to demonstrate defect documentation skills.
