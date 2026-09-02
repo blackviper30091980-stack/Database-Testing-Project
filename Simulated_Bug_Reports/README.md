@@ -90,5 +90,10 @@ PRIORITY: High
 
 TITLE: Database accepts INNER JOIN query with non-existing table.
 
+PRECONDITIONS:
+
+- students and courses tables exist.
+- The tables have the expected columns.
+- Database connection is active.
 
 
