@@ -43,7 +43,17 @@ VERSION/ENV: SQLite3 Database version 3.52.3; DBeaver 26.1.1; Script-4.sql;
 
 ID: DB - 02
 
-TITLE: Database accepts INSERT with duplicate PRIMARY KEY 'id' in 'students'table.
+TITLE: Database accepts INSERT with duplicate PRIMARY KEY student_id in 'students'table.
+
+SEVERITY: Critical
+
+PRIORITY: High
+
+Preconditions:
+
+-student_id is defined as a primary key;
+
+-a student with student_id = 1 already exists.
 
 
 
